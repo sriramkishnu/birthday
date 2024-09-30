@@ -47,7 +47,7 @@ function App() {
                     }}
                   >
                     <img
-                      src="https://drive.google.com/thumbnail?id=1zevC_VmExCiCq3jtvtlzp84ES7j5aBFo"
+                      src="https://drive.google.com/thumbnail?id=176uHsXwXZg4WSpRhWfMPYBKs3JkJDowE"
                       alt="drive image"
                     />
                   </span>
