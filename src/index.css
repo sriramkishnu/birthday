@@ -1,13 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"); /* Attractive font */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.typewriter {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden; /* Hide the overflow */
+  border-right: 3px solid black; /* Cursor style */
+  width: 0; /* Start with no width */
+  animation: typewriter 4s steps(14) forwards, blink 0.75s step-end 4s; /* Typewriter and blink */
+  animation-fill-mode: forwards; /* Retain end state */
+  max-width: fit-content; /* Ensure the container resizes based on content */
+  border-right: none; /* Stop cursor blinking after typing ends */
 }
