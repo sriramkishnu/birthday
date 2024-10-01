@@ -106,9 +106,17 @@ function App() {
                       color: "black",
                       display: "flex",
                       justifyContent: "center",
+                      flexDirection: "column",
+                      alignItems: "center",
                     }}
                   >
-                    <p className="typewriter">Happy Birthday Shanu❤️</p>
+                    <div className="typewriter line1">
+                      Happy Birthday Shanu❤️
+                    </div>
+                    <br />
+                    <div className="typewriter line2">
+                      You mean the 🌎 to me
+                    </div>
                   </span>
                 </Col>
 

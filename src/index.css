@@ -47,3 +47,16 @@ code {
   max-width: fit-content; /* Ensure the container resizes based on content */
   border-right: none; /* Stop cursor blinking after typing ends */
 }
+
+.line1 {
+  width: 0; /* Start with no width */
+  animation: typewriter 4s steps(24) forwards, blink 0.75s step-end 4s;
+  animation-fill-mode: forwards; /* Keep final state */
+}
+
+/* Animation for the second line, starts after 4s (same time as the first line ends) */
+.line2 {
+  width: 0; /* Start with no width */
+  animation: typewriter 4s steps(22) 2.5s forwards, blink 0.75s step-end 8s;
+  animation-fill-mode: forwards; /* Keep final state */
+}
