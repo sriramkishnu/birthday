@@ -16,7 +16,7 @@ pipeline {
 
             steps {
 
-                git url: 'https://github.com/sriramkishnu/birthday.git', branch: 'main'
+                git url: 'https://github.com/sriramkishnu/birthday', branch: 'main'
 
             }
 
