@@ -1,47 +1,39 @@
 pipeline {
-
     agent any
- 
+
     tools {
-
-        jdk 'jdk17'
-
-        maven 'maven3'
-
+        nodejs 'NodeJS'  // Configure this in Jenkins if needed
     }
- 
+
     stages {
- 
         stage('Checkout') {
-
             steps {
-
                 git url: 'https://github.com/sriramkishnu/birthday', branch: 'main'
-
             }
-
         }
- 
-        stage('Build & Test') {
 
+        stage('Install Dependencies') {
             steps {
-
-                sh 'mvn clean package'
-
+                sh 'npm install'
             }
-
         }
- 
+
+        stage('Build') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+
         stage('Archive Artifact') {
-
             steps {
-
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-
+                archiveArtifacts artifacts: 'dist/**/*', fingerprint: true, allowEmptyArchive: true
             }
-
         }
-
     }
-
 }
